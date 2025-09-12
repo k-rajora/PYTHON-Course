@@ -1,0 +1,58 @@
+we can use paranthese for the conditions but they are not necessarily required
+we can use it for the code clearity
+!⚠☢ Python uses spaces and tabs and : 
+
+
+# Basic if
+if condition:
+    statement
+OR 
+_________________________________________________________________
+
+if ( condition ):
+   statement
+
+
+_________________________________________________________________
+
+# if-else
+if condition:
+    statement
+else:
+    statement
+
+# if-elif-else
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+
+# Nested if
+if condition1:
+    if condition2:
+        statement
+
+# Shorthand
+result = "A" if condition else "B"
+
+# Operators
+==, !=, <, >, <=, >=  (comparison Operators)
+and, or, not  (logical operators )
+
+
+_________________________________________________________________
+MATCH case    ( like switch ) avialibel for python 3.10 +
+x = 2
+
+match x:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case _:
+        print("Other")
+
