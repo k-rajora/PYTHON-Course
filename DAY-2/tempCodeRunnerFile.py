@@ -1,0 +1,1 @@
+sorted(natural_number)

@@ -1,0 +1,151 @@
+List: nums = [10, 20, 30, 40, 50]
+
+Indexes:     0    1    2    3    4
+Negative:   -5   -4   -3   -2   -1
+
+Access Elements:
+nums[0] → 10      # first element
+nums[-1] → 50     # last element
+nums[1:4] → [20,30,40]   # slicing
+
+Modify Elements:
+nums[0] = 100      # [100,20,30,40,50]
+nums.append(60)    # [100,20,30,40,50,60]
+nums.insert(2, 25) # [100,20,25,30,40,50,60]
+nums.remove(40)    # [100,20,25,30,50,60]
+
+Looping:
+for item in nums:
+    print(item)
+for i, item in enumerate(nums):
+    print(i, item)
+
+Common Methods:
++ append(x)        → add x at end
++ extend(iterable) → add all elements from iterable
++ insert(i,x)      → insert x at index i
++ remove(x)        → remove first occurrence of x
++ pop([i])         → remove & return element at i (default last)
++ clear()          → remove all elements
++ index(x)         → first index of x
++ count(x)         → count occurrences of x
++ sort()           → sort list in-place
++ reverse()        → reverse list in-place
++ copy()           → return shallow copy
+
+Other Functions:
+len(nums)   → 6
+sum(nums)   → sum of all numbers
+max(nums)   → largest element
+min(nums)   → smallest element
+sorted(nums)→ returns sorted list without changing original
+_______________________________________________________________________________________________
+
+---
+
+## 🔹 **What is a List?**
+
+* A **list** is an **ordered collection** of elements in Python.
+* Elements can be of **any data type**: numbers, strings, other lists, objects, etc.
+* Lists are **mutable**, meaning you can **change, add, or remove items**.
+* Lists are defined using **square brackets `[]`**.
+
+---
+
+## 🔹 **Creating Lists**
+
+```python
+# Empty list
+lst1 = []
+
+# List of numbers
+lst2 = [1, 2, 3, 4, 5]
+
+# List of mixed data types
+lst3 = [1, "Hello", 3.14, True]
+
+# Nested list
+lst4 = [1, [2, 3], [4, 5]]
+```
+
+---
+
+## 🔹 **Accessing List Elements**
+
+```python
+nums = [10, 20, 30, 40, 50]
+
+print(nums[0])   # 10 → first element
+print(nums[-1])  # 50 → last element
+print(nums[1:4]) # [20, 30, 40] → slicing
+```
+
+---
+
+## 🔹 **Modifying Lists**
+
+```python
+nums = [1, 2, 3, 4, 5]
+
+nums[0] = 100      # Change first element
+nums.append(6)     # Add element at end
+nums.insert(2, 200) # Insert 200 at index 2
+nums.remove(3)     # Remove first occurrence of 3
+```
+
+---
+
+## 🔹 **Looping Through Lists**
+
+```python
+for item in nums:
+    print(item)
+
+# With index
+for i, item in enumerate(nums):
+    print(f"Index {i} -> {item}")
+```
+
+---
+
+## 🔹 **Common Operations**
+
+* `len(lst)` → length of list
+* `max(lst)`, `min(lst)` → maximum & minimum
+* `sum(lst)` → sum of numbers
+* `sorted(lst)` → returns sorted list (doesn’t change original)
+* `lst.sort()` → sorts list in-place
+* `lst.reverse()` → reverses list in-place
+
+---
+
+## 🔹 **List Methods / Sub-functions Table**
+
+| Method / Function               | Description                                         | Example                              |
+| ------------------------------- | --------------------------------------------------- | ------------------------------------ |
+| `append(x)`                     | Add `x` at end                                      | `[1,2].append(3)` → `[1,2,3]`        |
+| `extend(iterable)`              | Add all elements from another iterable              | `[1,2].extend([3,4])` → `[1,2,3,4]`  |
+| `insert(i, x)`                  | Insert `x` at index `i`                             | `[1,2].insert(1, 100)` → `[1,100,2]` |
+| `remove(x)`                     | Remove first occurrence of `x`                      | `[1,2,2].remove(2)` → `[1,2]`        |
+| `pop([i])`                      | Remove & return element at index `i` (default last) | `[1,2,3].pop()` → 3, list `[1,2]`    |
+| `clear()`                       | Remove all elements                                 | `[1,2].clear()` → `[]`               |
+| `index(x, start, end)`          | Return first index of `x`                           | `[1,2,3,2].index(2)` → 1             |
+| `count(x)`                      | Count occurrences of `x`                            | `[1,2,2].count(2)` → 2               |
+| `sort(key=None, reverse=False)` | Sort list in-place                                  | `[3,1,2].sort()` → `[1,2,3]`         |
+| `reverse()`                     | Reverse list in-place                               | `[1,2,3].reverse()` → `[3,2,1]`      |
+| `copy()`                        | Return shallow copy                                 | `[1,2].copy()` → `[1,2]`             |
+
+---
+
+✅ **Key Points:**
+
+* Lists are **ordered** → maintain sequence.
+* Lists are **mutable** → can change elements.
+* Lists can hold **mixed data types**.
+* Use **methods** to manipulate lists efficiently.
+
+---
+
+If you want, I can also make a **quick visual diagram showing lists, indexing, slicing, and methods** — it helps remember everything at a glance.
+
+Do you want me to do that?
