@@ -1,0 +1,69 @@
+Good question 👍 Let’s break it down.
+
+### 🔹 **Lambda Functions in Python**
+
+* A **lambda function** is a small, **anonymous function** (function without a name).
+* It is created using the keyword **`lambda`** instead of `def`.
+* It can take any number of arguments but **can only have one expression**.
+* Useful when you need a quick function for a short period (often used inside `map()`, `filter()`, `sorted()`).
+
+---
+
+### 🔹 **Syntax**
+
+```python
+lambda arguments: expression
+```
+
+* The expression is evaluated and returned automatically (no need for `return`).
+
+---
+
+### 🔹 **Examples**
+
+1. **Basic Example**
+
+```python
+square = lambda x: x ** 2
+print(square(5))   # Output: 25
+```
+
+2. **Multiple Arguments**
+
+```python
+add = lambda a, b: a + b
+print(add(10, 20))  # Output: 30
+```
+
+3. **Used in Sorting**
+
+```python
+nums = [(2, 5), (1, 8), (7, 3)]
+# sort by second element
+sorted_nums = sorted(nums, key=lambda x: x[1])
+print(sorted_nums)  # [(7, 3), (2, 5), (1, 8)]
+```
+
+4. **With map()**
+
+```python
+nums = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, nums))
+print(squares)  # [1, 4, 9, 16, 25]
+```
+
+5. **With filter()**
+
+```python
+nums = [1, 2, 3, 4, 5, 6]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print(evens)  # [2, 4, 6]
+```
+
+---
+
+✅ **Key Point**: Lambda functions are best for **short, throwaway functions**. If the function logic is long or reused multiple times → better use `def`.
+
+---
+
+Do you want me to also show you **when to use `lambda` vs normal `def` functions** (so you know which one is better in a given case)?

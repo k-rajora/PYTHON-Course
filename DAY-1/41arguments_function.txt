@@ -1,0 +1,140 @@
+Perfect 👍 Let’s go through **Arguments in Python functions**, including `*args` and `**kwargs`, step by step.
+
+---
+
+# 🔹 Function Arguments in Python
+
+When defining a function, you can pass data into it using **arguments**. Python gives you a lot of flexibility with different types.
+
+---
+
+## 1️⃣ Positional Arguments
+
+* Values are passed in order.
+
+```python
+def add(a, b):
+    return a + b
+
+print(add(5, 3))   # 8
+```
+
+Here `5` → `a`, and `3` → `b`.
+Order matters.
+
+---
+
+## 2️⃣ Keyword Arguments
+
+* You specify the parameter name while calling.
+
+```python
+def greet(name, age):
+    return f"My name is {name}, I am {age} years old."
+
+print(greet(age=23, name="Harsh"))
+```
+
+👉 Order doesn’t matter when you use keywords.
+
+---
+
+## 3️⃣ Default Arguments
+
+* Provide a default value if no argument is passed.
+
+```python
+def greet(name="Guest"):
+    return f"Hello, {name}!"
+
+print(greet())        # Hello, Guest
+print(greet("Harsh")) # Hello, Harsh
+```
+
+---
+
+## 4️⃣ Variable-Length Arguments → `*args`
+
+* Use when you don’t know how many **positional arguments** will be passed.
+* `*args` collects them into a **tuple**.
+
+```python
+def add_all(*args):
+    return sum(args)
+
+print(add_all(1, 2, 3))        # 6
+print(add_all(10, 20, 30, 40)) # 100
+```
+
+👉 `args = (1, 2, 3)` in first call.
+
+---
+
+## 5️⃣ Variable-Length Keyword Arguments → `**kwargs`
+
+* Use when you don’t know how many **keyword arguments** will be passed.
+* `**kwargs` collects them into a **dictionary**.
+
+```python
+def show_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+show_details(name="Harsh", age=23, city="Bihar")
+```
+
+👉 Output:
+
+```
+name: Harsh
+age: 23
+city: Bihar
+```
+
+Here `kwargs = {"name": "Harsh", "age": 23, "city": "Bihar"}`
+
+---
+
+## 6️⃣ Mixing Different Arguments
+
+Order matters:
+
+```
+positional → *args → default → **kwargs
+```
+
+```python
+def demo(a, b=10, *args, **kwargs):
+    print("a:", a)
+    print("b:", b)
+    print("args:", args)
+    print("kwargs:", kwargs)
+
+demo(5, 20, 30, 40, x=100, y=200)
+```
+
+👉 Output:
+
+```
+a: 5
+b: 20
+args: (30, 40)
+kwargs: {'x': 100, 'y': 200}
+```
+
+---
+
+✅ **Cheat Sheet**
+
+| Type       | Syntax            | Stored as               | Example               |
+| ---------- | ----------------- | ----------------------- | --------------------- |
+| Positional | `func(a, b)`      | Passed in order         | `add(2, 3)`           |
+| Keyword    | `func(a=2, b=3)`  | Name → value            | `greet(name="Harsh")` |
+| Default    | `def f(a=5)`      | Uses default if missing | `f()`                 |
+| `*args`    | `def f(*args)`    | Tuple                   | `(1, 2, 3)`           |
+| `**kwargs` | `def f(**kwargs)` | Dict                    | `{'x': 10, 'y': 20}`  |
+
+---
+
+⚡ Now tell me:
+Would you like me to create a **real-world example combining `*args` and `**kwargs`** (like a student/employee details function)?
