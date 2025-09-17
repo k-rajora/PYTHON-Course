@@ -62,8 +62,7 @@ Memory	       5)  More memory efficient for              5)  Requires more memor
                  large lists as it doesn't create a copy	
 """
 # numgs=[1,20,2,3,3,4,5,6]
-# print ( numgs.sort(reverse=True))
-
+# print ( numgs.sort(reverse=True)
 #Merging two lists 
 list1=[1,2,3] 
 list2=[4,5,6]
