@@ -1,0 +1,8 @@
+{
+    "service": "nginx",
+    "status": "running",
+    "ports": [
+        80,
+        443
+    ]
+}
